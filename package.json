@@ -1,0 +1,101 @@
+{
+  "name": "wizhi-security-assets",
+  "version": "1.0.0",
+  "description": "Assets for wizhi security plugin.",
+  "main": "assets/scripts/main.js",
+  "scripts": {
+    "dev": "parcel watch ./assets/scripts/main.js --no-hmr --public-url ./ & npm run browsersync",
+    "build": "parcel build ./assets/scripts/main.js"
+  },
+  "author": "Amos Lee",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "autoprefixer": "^9.4.2",
+    "babel-core": "^6.26.3",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-minify": "^0.5.0",
+    "browser-sync": "^2.26.3",
+    "node-sass": "^4.11.0",
+    "parcel-plugin-static-files-copy": "^2.1.1",
+    "parcel-plugin-structurize": "^1.1.0"
+  },
+  "parcel-plugin-structurize": {
+    "scripts": {
+      "match": "*.{js,js.map}",
+      "folder": "scripts"
+    },
+    "styles": {
+      "match": "*.{css,css.map}",
+      "folder": "styles"
+    },
+    "assets": {
+      "match": "*.{png,svg,jpg,jpg2,jpeg,gif,bmp,webm,ttf,eot,woff}",
+      "folder": "images"
+    }
+  },
+  "jshintConfig": {
+    "undef": true,
+    "unused": true,
+    "bitwise": true,
+    "browser": true,
+    "curly": true,
+    "eqeqeq": true,
+    "eqnull": true,
+    "esnext": true,
+    "immed": true,
+    "jquery": true,
+    "latedef": true,
+    "newcap": true,
+    "noarg": true,
+    "node": true,
+    "strict": false
+  },
+  "jscsConfig": {
+    "preset": "airbnb",
+    "fix": true,
+    "maxErrors": 50,
+    "fileExtensions": [
+      ".js",
+      ".jsx"
+    ],
+    "excludeFiles": []
+  },
+  "eslintConfig": {
+    "parserOptions": {
+      "sourceType": "module",
+      "ecmaFeatures": {
+        "jsx": true
+      }
+    },
+    "env": {
+      "es6": true,
+      "browser": true,
+      "node": true,
+      "commonjs": false,
+      "mocha": true,
+      "jquery": true
+    }
+  },
+  "babel": {
+    "presets": [
+      "minify",
+      "es2015"
+    ]
+  },
+  "postcss": {
+    "modules": false,
+    "plugins": {
+      "autoprefixer": {
+        "browsers": [
+          "Firefox >= 52",
+          "Chrome >= 55",
+          "ie >= 8",
+          "last 4 versions",
+          "Safari >= 9"
+        ],
+        "flexbox": "no-2009"
+      }
+    }
+  }
+}
