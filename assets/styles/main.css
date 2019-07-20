@@ -1,0 +1,18 @@
+a{
+    color: #f00;
+}
+
+@tailwind base;
+
+@font-face {
+  font-family: Proxima Nova;
+  font-weight: 400;
+}
+@font-face {
+  font-family: Proxima Nova;
+  font-weight: 500;
+}
+
+@tailwind components;
+
+@tailwind utilities;
